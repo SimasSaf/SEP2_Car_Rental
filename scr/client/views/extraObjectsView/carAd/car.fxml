@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="650.0" style="-fx-border-color: #AAA;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.views.extraObjectsView.carAd.CarController">
+   <children>
+      <ImageView fitHeight="182.0" fitWidth="271.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../utils/images/KEY0.CC-Svg-Stock-Delorean-Drawing-Decal-Delorean-Png.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="TOP_RIGHT" prefHeight="219.0" prefWidth="522.0">
+         <children>
+            <FlowPane hgap="20.0" orientation="VERTICAL" prefHeight="186.0" prefWidth="522.0" vgap="30.0">
+               <children>
+                  <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Make:  DMC">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Model: De Lorean">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seats: 4">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type: Amaizing">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Range 450 KM">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price: 5000 DK">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </FlowPane>
+            <Button fx:id="reserveButton" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onReserve" text="Reserve" textAlignment="RIGHT">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>

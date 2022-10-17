@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="581.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.views.extraObjectsView.myBusinessInformation.MyBusinessInformationController">
+   <children>
+      <HBox prefHeight="73.0" prefWidth="432.0" spacing="10.0">
+         <VBox.margin>
+            <Insets left="20.0" right="30.0" />
+         </VBox.margin>
+         <children>
+            <Text fill="#0a51bc" strokeType="OUTSIDE" strokeWidth="0.0" text="My Bussiness Information">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <VBox maxHeight="-Infinity" prefHeight="350.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="250.0" prefWidth="472.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="472.0">
+                           <children>
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="empIdTextField" editable="false" promptText="Employee Id" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="16.0" prefWidth="165.0" spacing="20.0">
+                           <children>
+                              <Text fill="#adaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="Work Address">
+                                 <font>
+                                    <Font name="Arial Italic" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Separator prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="streetTextField" promptText="Street" />
+                        <TextField fx:id="cityTextField" promptText="City" />
+                        <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="200.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="186.0" spacing="20.0">
+                           <children>
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="395.0" prefWidth="160.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                        <TextField fx:id="ssnTextField" promptText="Social Secure Number">
+                           <font>
+                              <Font name="System Italic" size="13.0" />
+                           </font>
+                        </TextField>
+                        <HBox prefHeight="22.0" prefWidth="137.0" />
+                        <TextField fx:id="numberTextField" promptText="Number" />
+                        <TextField fx:id="countryTextField" promptText="Country" />
+                        <TextField fx:id="zipTextField" promptText="Zip" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="186.0" spacing="20.0">
+                           <children>
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

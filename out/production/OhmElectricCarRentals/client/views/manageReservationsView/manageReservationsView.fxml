@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.views.manageAccountView.ManageAccountsViewController">
+   <children>
+      <HBox fx:id="menuBarHBox" alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="50.0" prefWidth="1024.0" style="-fx-background-color: #e5e5e5#e5e5e5;">
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="512.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="472.0">
+                     <children>
+                        <Text fill="#0a51bc" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservations">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="26.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TableView prefHeight="200.0" prefWidth="683.0" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn prefWidth="49.0" text="#ID" />
+                        <TableColumn prefWidth="54.0" text="From" />
+                        <TableColumn prefWidth="50.0" text="To" />
+                        <TableColumn prefWidth="45.0" text="Car" />
+                        <TableColumn prefWidth="55.0" text="Mother" />
+                        <TableColumn prefWidth="62.0" text="Fucker" />
+                        <TableColumn minWidth="0.0" prefWidth="63.0" text="keep" />
+                        <TableColumn minWidth="0.0" prefWidth="93.0" text="reading" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="581.0" prefWidth="472.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="73.0" prefWidth="432.0" spacing="10.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox maxHeight="-Infinity" prefHeight="350.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="250.0" prefWidth="472.0" />
+                        <HBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="472.0" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TextField fx:id="firstNameTextField" promptText="ReservationId" />
+                                    <TextField fx:id="licenseTextField" promptText="License #" />
+                                    <DatePicker fx:id="DOBDatePicker1" promptText="From" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="186.0" spacing="20.0">
+                                       <children>
+                                          <Text fill="#adaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="User">
+                                             <font>
+                                                <Font name="Arial Italic" size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Separator prefWidth="200.0" />
+                                       </children>
+                                    </HBox>
+                                    <TextField fx:id="streetTextField" promptText="UserID" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="186.0" spacing="20.0" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="186.0" spacing="20.0">
+                                       <children>
+                                          <Text fill="#adaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="Car">
+                                             <font>
+                                                <Font name="Arial Italic" size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Separator prefWidth="200.0" />
+                                       </children>
+                                    </HBox>
+                                    <TextField fx:id="numberTextField1" promptText="CarId" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TextField fx:id="lastNameTextField" promptText="pickUpPoint">
+                                       <font>
+                                          <Font name="System Italic" size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <ChoiceBox prefHeight="26.0" prefWidth="172.0" />
+                                    <DatePicker fx:id="DOBDatePicker" promptText="To" />
+                                    <HBox prefHeight="18.0" prefWidth="186.0" />
+                                    <TextField fx:id="numberTextField" promptText="Name" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="186.0" spacing="20.0" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="186.0" spacing="20.0" />
+                                    <TextField fx:id="zipTextField" promptText="Brand" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="30.0" right="30.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox fx:id="kindHBox" alignment="TOP_CENTER" spacing="30.0">
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="Admin">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="User" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" text="Front Desk" toggleGroup="$User" />
+                        <RadioButton mnemonicParsing="false" selected="true" text="Customer" toggleGroup="$User" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <HBox fx:id="createAccountHBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onCancel" prefHeight="30.0" prefWidth="90.0" spacing="60.0" style="-fx-background-color: #5CD85A#5CD85A; -fx-background-radius: 5px;">
+                           <children>
+                              <Text fill="#363333" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancel">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="createAccountHBox11" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onUpdate" prefHeight="30.0" prefWidth="90.0" spacing="60.0" style="-fx-background-color: #5CD85A#5CD85A; -fx-background-radius: 5px;">
+                           <children>
+                              <Text fill="#363333" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="createAccountHBox1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onUpdate" prefHeight="30.0" prefWidth="90.0" spacing="60.0" style="-fx-background-color: #5CD85A#5CD85A; -fx-background-radius: 5px;">
+                           <children>
+                              <Text fill="#363333" strokeType="OUTSIDE" strokeWidth="0.0" text="Update">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

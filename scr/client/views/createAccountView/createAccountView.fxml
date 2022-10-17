@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.views.createAccountView.CreateAccountViewController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="512.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="17.0" fitWidth="18.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../utils/images/windowclose_104378.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="7.0" top="7.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE ACCUNT">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </Text>
+      <HBox alignment="TOP_CENTER" spacing="3.0">
+         <children>
+            <Text fx:id="messageText" fill="#0a51bc" strokeType="OUTSIDE" strokeWidth="0.0" text="Just share with us some personal Info!">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="30.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <Separator maxWidth="-Infinity" prefHeight="3.0" prefWidth="427.0" VBox.vgrow="NEVER" />
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="firstNameTextField" promptText="First Name" />
+                  <TextField fx:id="emailTextField" promptText="e-mail" />
+                  <TextField fx:id="licenseTextField" promptText="License #" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="186.0" spacing="20.0">
+                     <children>
+                        <Text fill="#adaaaa" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+                           <font>
+                              <Font name="Arial Italic" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="streetTextField" promptText="Street" />
+                  <TextField fx:id="cityTextField" promptText="City" />
+                  <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="200.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="186.0" spacing="20.0">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <PasswordField fx:id="passwordPasswordField" promptText="Password" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="lastNameTextField" promptText="Last Name">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="phoneTextField" promptText="Phone Number" />
+                  <DatePicker fx:id="DOBDatePicker" promptText="Date of Birth" />
+                  <HBox prefHeight="28.0" prefWidth="175.0" />
+                  <TextField fx:id="numberTextField" promptText="Number" />
+                  <TextField fx:id="countryTextField" promptText="Country" />
+                  <TextField fx:id="zipTextField" promptText="Zip" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="186.0" spacing="20.0">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <PasswordField fx:id="rePasswordPasswordField" promptText="Re-type Password" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="kindHBox" alignment="TOP_CENTER" spacing="30.0" VBox.vgrow="NEVER">
+         <children>
+            <RadioButton fx:id="adminRadioButton" mnemonicParsing="false" text="Admin">
+               <toggleGroup>
+                  <ToggleGroup fx:id="userToggle" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="frontDeskRadioButton" mnemonicParsing="false" text="Front Desk" toggleGroup="$userToggle" />
+            <RadioButton fx:id="customerRadioButton" mnemonicParsing="false" selected="true" text="Customer" toggleGroup="$userToggle" />
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="errorText" fill="#ff0606" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="createAccountHBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#createAccount" prefHeight="30.0" prefWidth="200.0" spacing="60.0" style="-fx-background-color: #5CD85A#5CD85A; -fx-background-radius: 5px;">
+         <children>
+            <Text fill="#363333" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Account">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="60.0" prefWidth="200.0" spacing="2.0" style="-fx-background-color: #E0E0E0#E0E0E0;">
+         <children>
+            <Text fill="#0a51bc" strokeType="OUTSIDE" strokeWidth="0.0" text="Any Issues? help@ohm-rentals.com">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</VBox>
